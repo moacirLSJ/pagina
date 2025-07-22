@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First github page</title>
+<meta charset="UTF-8" />
+<title>Formulário com JavaScript</title>
 </head>
 <body>
-    <h1>Welcome to my first github page!</h1>
-    <json>
-        <nip>07200188</nip>
-        <status>entrar</status>
-    </json>
-    <form action="">
-        <input type="text">
-        <button type="submit"></button>
-    </form>
+
+<form id="meuForm">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" required />
+  
+  <br><br>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required />
+  
+  <br><br>
+  
+  <button type="submit">Enviar</button>
+</form>
+
+<div id="resultado"></div>
+
+<script>
+  document.getElementById('meuForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // impede envio padrão do form
+    
+    // Captura os valores dos campos
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    
+    // Aqui você pode processar os dados 
+    // Exemplo: mostrar numa div sem enviar para servidor
+    document.getElementById('resultado').innerHTML = 
+      `<p>Olá, <strong>${nome}</strong>. Seu email é <strong>${email}</strong>.</p>`;
+    
+    // Limpar formulário se quiser
+    // this.reset();
+  });
+</script>
+
 </body>
 </html>
