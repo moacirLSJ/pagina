@@ -6,39 +6,9 @@
 </head>
 <body>
 
-<form id="meuForm">
-  <label for="nome">Nome:</label>
-  <input type="text" id="nome" name="nome" required />
-  
-  <br><br>
-  
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required />
-  
-  <br><br>
-  
-  <button type="submit">Enviar</button>
-</form>
+    <n:>07200188</n:>
+    <s:>e</s:>
 
-<div id="resultado"></div>
-
-<script>
-  document.getElementById('meuForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // impede envio padrão do form
-    
-    // Captura os valores dos campos
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    
-    // Aqui você pode processar os dados 
-    // Exemplo: mostrar numa div sem enviar para servidor
-    document.getElementById('resultado').innerHTML = 
-      `<p>Olá, <strong>${nome}</strong>. Seu email é <strong>${email}</strong>.</p>`;
-    
-    // Limpar formulário se quiser
-    // this.reset();
-  });
-</script>
 
 </body>
 </html>
